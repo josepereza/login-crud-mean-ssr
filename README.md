@@ -41,7 +41,7 @@ getToken(){
      }
      
   ```
-# ANGULAR UNIVESAL.
+# ANGULAR UNIVERSAL.
 ## Angular Universal schematic installation
 ```
 ng add @nguniversal/express-engine --clientProject [name]
@@ -207,6 +207,6 @@ I highly recommend the following Udemy course which has an excellent section on 
 Angular - The Complete Guide (2020 Edition)
 In addition, the following were really helpful for writing this article, and I very much recommend them as further reading:
 
-https://github.com/angular/universal/blob/master/docs/gotchas.md
-https://github.com/angular/universal-starter
-https://medium.com/@MarkPieszak/angular-universal-server-side-rendering-deep-dive-dc442a6be7b7
+* https://github.com/angular/universal/blob/master/docs/gotchas.md
+* https://github.com/angular/universal-starter
+* https://medium.com/@MarkPieszak/angular-universal-server-side-rendering-deep-dive-dc442a6be7b7
