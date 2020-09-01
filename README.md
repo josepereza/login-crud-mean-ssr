@@ -2,6 +2,7 @@
 
 * https://willtaylor.blog/angular-universal-gotchas/
 * https://medium.com/@MarkPieszak/angular-universal-server-side-rendering-deep-dive-dc442a6be7b7
+* https://www.npmjs.com/package/@ng-toolkit/universal
 
 * Para Angular Universal una solucion es cambiar todos los localStorage con :
 
