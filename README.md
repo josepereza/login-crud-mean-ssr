@@ -195,7 +195,16 @@ When a page renders on the server in a Universal app, a http request which takes
 
 You should take the above into consideration when designing your application - if a http request is slow and is blocking the server render of a page, could that request be deferred from the first render and made after the user clicks a button or interacts with the page in some way? Could the page be cached by the server if it’s content doesn’t update often?
 
-Conclusion
+## Try to limit or avoid using
+  * Try to limit or avoid using setTimeout. It will slow down the server-side rendering process. Make sure to remove them ngOnDestroy in Components.
+  * Also for RxJs timeouts, make sure to cancel their stream on success, for they can slow down rendering as well.
+  * Don't manipulate the nativeElement directly. Use the Renderer2 from "@angular/core". We do this to ensure that in any environment we're able to change our view.
+  * The application runs XHR requests on the server & once again on the Client-side (when the application bootstraps)
+Use a cache that's transferred from server to client (TODO: Point to the example)
+  * Know the difference between attributes and properties in relation to the DOM.
+  * Keep your directives stateless as much as possible. For stateful directives, you may need to provide an attribute that reflects the corresponding property with an initial string value such as url in img tag. For our native element the src attribute is reflected as the src property of the element type HTMLImageElement.
+  
+### Conclusion
 We have been through what I have found over the last year or so of working with Angular Universal to be the biggest gotchas. By making a few adaptions to the way you build your application, it will be robust enough to run smoothly in both browser and server environments.
 
 Some resources that helped me to write this article, and that you may also find helpful, are given below.
